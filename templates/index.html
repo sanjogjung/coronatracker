@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Corona Tracker</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="/static/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<h1 style="text-align: center;">Live Corona Tracker</h1>
+	<h2>Total Cases {{total_cases}}</h2>
+	<h3 style="display: inline; margin-right: 100px;">Total Deaths : {{total_deaths}}</h3>
+	<h3 style="display: inline;">Total Recovered :{{total_recovered}}</h3>
+	<p><h3 style="display: inline; margin-right: 100px;">Active Cases {{active_cases}}</h3>
+	<h3 style="display: inline;">Closed Cases  {{closed_cases}}</h3>
+	</p>
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">Country</th>
+								<th class="column2">Total Cases</th>
+								<th class="column3">New Cases</th>
+								<th class="column4">Total Deaths</th>
+								<th class="column5">New Deaths</th>
+								<th class="column6">Total Recovered</th>
+								<th style="width: 12.5%;" class="column7">Active Cases</th>
+								<th style="width: 12.5%;" class="column8">Serious Cases</th>
+
+
+							</tr>
+						</thead>
+						<tbody>
+							{% for x in countries_data%}
+				
+
+								<tr>
+									<td class="column1">{{x.name}}</td>
+									<td class="column2">{{x.total_cases}}</td>
+									<td class="column3">{{x.new_cases}}</td>
+									<td class="column4">{{x.total_deaths}}</td>
+									<td class="column5">{{x.new_deaths}}</td>
+									<td class="column6">{{x.total_recovered}}</td>
+									<td class="column7">{{x.active_cases}}</td>
+									<td class="column8">{{x.serious_cases}}</td>
+
+
+								</tr>
+								
+								{% endfor%}
+
+
+								
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendor/bootstrap/js/popper.js"></script>
+	<script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/js/main.js"></script>
+
+</body>
+</html>
