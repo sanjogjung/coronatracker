@@ -23,7 +23,7 @@ def home():
   countries_data = [] # empty countries data
   for row in rows:
     country_data=dict() #
-    #so we are going to take 8 show 8 columns in our table
+    #so we are going to show 8 columns in our table
     # name,totalcases,newcases,totaldeaths,newdeaths,totalrecovered,activecases,seriouscases
     #so we are using a dictionary for each country and appending it to the list
     all_data = row.text.split("\n")[1:9] # splitting the row because of new line character and taking the 8 values
